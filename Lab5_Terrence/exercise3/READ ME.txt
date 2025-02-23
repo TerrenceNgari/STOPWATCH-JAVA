@@ -1,0 +1,38 @@
+Stone Game Readme
+Overview
+The Stone Game is a simple game where two players take turns removing stones from a pile. The player who takes the last stone loses the game. This program allows a human player to play against a computer player.
+
+Classes
+Player: Abstract class representing a player in the game.
+
+Subclasses: HumanPlayer, ComputerPlayer
+HumanPlayer: Represents a human player.
+
+Responsible for selecting the number of stones to remove from the pile.
+ComputerPlayer: Represents a computer player.
+
+Uses a simple strategy to select the number of stones to remove.
+GameBoard: Represents the game board, which includes the pile of stones.
+
+Keeps track of the number of stones remaining and provides methods to remove stones.
+StoneGame: Main class that controls the flow of the game.
+
+Manages the game loop, alternating turns between players and checking for a winner.
+Relationships
+The StoneGame class creates instances of HumanPlayer and ComputerPlayer to represent the players. It also creates an instance of GameBoard to represent the pile of stones. The StoneGame class controls the flow of the game, alternating turns between players and updating the game board.
+
+- How to Use
+	Run the StoneGame class to start the game.
+	Enter the number of stones to use in the game.
+	Enter your name as the human player.
+	Choose whether the human player or the computer player goes first.
+	Follow the prompts to take turns removing stones from the pile.
+	The game will continue until one player takes the last stone.
+
+- Adapting to Changes
+	New Player Strategy: To introduce a new player with a different strategy, create a new subclass of Player and implement the pickStones method with the new strategy. The StoneGame class can then create an instance of the new player class and use it in the game.
+
+	Multiple Piles of Stones: To introduce multiple piles of stones, modify the GameBoard class to manage multiple piles. Each player would then select a pile to remove stones from on their turn.
+
+	Two Computers Playing: To have the game played between two computer players, modify the StoneGame class to create two instances of ComputerPlayer instead of a HumanPlayer and a ComputerPlayer.
+
